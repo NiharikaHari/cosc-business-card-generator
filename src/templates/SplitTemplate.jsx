@@ -3,7 +3,7 @@ import Icon from "../components/Icon";
 import { getFilledLinks, getFontStack, getInitials, getSubtitle } from "../constants";
 import "./templates.css";
 
-const ModernTemplate = forwardRef(function ModernTemplate(
+const SplitTemplate = forwardRef(function SplitTemplate(
   { name, title, company, tagline, imageDataUrl, links, accentColor, secondaryColor, font, background },
   ref
 ) {
@@ -13,22 +13,24 @@ const ModernTemplate = forwardRef(function ModernTemplate(
   return (
     <div
       ref={ref}
-      className="business-card card-modern"
+      className="business-card card-split"
       style={{ "--accent": accentColor, "--secondary": secondaryColor, "--font-heading": getFontStack(font) }}
     >
-      <div className="card-modern-side card-fill" data-bg={background}>
+      <div className="card-split-left card-fill" data-bg={background}>
         {imageDataUrl ? (
-          <img src={imageDataUrl} alt="" className="business-card-photo card-modern-photo" />
+          <img src={imageDataUrl} alt="" className="business-card-photo card-split-photo" />
         ) : (
-          <div className="business-card-photo-placeholder card-modern-photo">
+          <div className="business-card-photo-placeholder card-split-photo">
             {getInitials(name)}
           </div>
         )}
+        <p className="card-split-name card-name">{name || "Your Name"}</p>
       </div>
-      <div className="card-modern-body">
-        <p className="card-modern-name card-name">{name || "Your Name"}</p>
-        {subtitle && <p className="card-title">{subtitle}</p>}
-        {tagline && <p className="card-tagline">{tagline}</p>}
+      <div className="card-split-right">
+        <div className="card-split-text">
+          {subtitle && <p className="card-title">{subtitle}</p>}
+          {tagline && <p className="card-tagline">{tagline}</p>}
+        </div>
         {filledLinks.length > 0 && (
           <div className="business-card-links">
             {filledLinks.map((platform) => (
@@ -43,4 +45,4 @@ const ModernTemplate = forwardRef(function ModernTemplate(
   );
 });
 
-export default ModernTemplate;
+export default SplitTemplate;

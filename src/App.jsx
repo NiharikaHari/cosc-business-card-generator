@@ -35,9 +35,15 @@ export default function App() {
                 ref={cardRef}
                 template={state.template}
                 name={state.name}
+                title={state.title}
+                company={state.company}
+                tagline={state.tagline}
                 imageDataUrl={state.imageDataUrl}
                 links={state.links}
                 accentColor={state.accentColor}
+                secondaryColor={state.secondaryColor}
+                font={state.font}
+                background={state.background}
               />
             </div>
             <ExportBar cardRef={cardRef} name={state.name} />

@@ -197,11 +197,12 @@
 
 .template-picker {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
 .template-option {
-  flex: 1;
+  flex: 1 1 90px;
   background: #fff;
   border: 1px solid #ded9f2;
   border-radius: 8px;
@@ -225,6 +226,7 @@
 
 .color-picker {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -238,6 +240,34 @@
 
 .color-swatch-active {
   border-color: #201a4d;
+}
+
+.color-swatch-custom {
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0;
+  background: none;
+}
+
+.color-swatch-custom::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 50%;
+}
+
+.color-swatch-custom::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+/* Font / background pickers (reuse .template-picker / .template-option) */
+
+.bg-swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: middle;
 }
 
 /* Export bar */

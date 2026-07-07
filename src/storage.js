@@ -2,6 +2,9 @@ const STORAGE_KEY = "business-card-draft";
 
 const DEFAULT_STATE = {
   name: "",
+  title: "",
+  company: "",
+  tagline: "",
   imageDataUrl: null,
   links: {
     linkedin: "",
@@ -13,6 +16,9 @@ const DEFAULT_STATE = {
   },
   template: "minimal",
   accentColor: "#6d5efc",
+  secondaryColor: "#201a4d",
+  font: "sans",
+  background: "solid",
 };
 
 export function loadState() {
