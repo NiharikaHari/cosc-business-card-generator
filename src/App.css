@@ -1,0 +1,280 @@
+.app-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  background: #f4f4fb;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: #201a4d;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.app-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  text-align: left;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.save-error {
+  background: #fdecea;
+  border: 1px solid #f5c2c0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 0;
+}
+
+.app-panes {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.app-pane {
+  flex: 1 1 360px;
+  min-width: 0;
+}
+
+.app-pane-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  position: sticky;
+  top: 24px;
+}
+
+.card-preview-wrap {
+  padding: 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(32, 26, 77, 0.12);
+}
+
+/* Form */
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(32, 26, 77, 0.12);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #453a68;
+}
+
+.form-field > span:first-child {
+  font-weight: 600;
+}
+
+.form-field input[type="text"] {
+  border: 1px solid #ded9f2;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  background: #fff;
+  color: #1f2430;
+  font-family: inherit;
+}
+
+.form-field input:focus {
+  outline: 2px solid #6d5efc;
+  outline-offset: -1px;
+}
+
+.form-error {
+  color: #c9372c;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* Image uploader */
+
+.image-uploader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.image-uploader-thumb {
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+
+.image-uploader-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #ded9f2;
+}
+
+.image-uploader-remove {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  background: #201a4d;
+  color: #fff;
+  font-size: 0.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.image-uploader-trigger {
+  background: none;
+  border: 1px dashed #ded9f2;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  color: #453a68;
+  cursor: pointer;
+}
+
+.image-uploader-trigger:hover {
+  background: #ece8fb;
+}
+
+/* Social links */
+
+.social-links-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-link-field {
+  gap: 4px;
+}
+
+.social-link-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 400;
+}
+
+/* Template picker */
+
+.template-picker {
+  display: flex;
+  gap: 8px;
+}
+
+.template-option {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #ded9f2;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 0.85rem;
+  color: #453a68;
+  cursor: pointer;
+}
+
+.template-option:hover {
+  background: #ece8fb;
+}
+
+.template-option-active {
+  background: #6d5efc;
+  border-color: #6d5efc;
+  color: #fff;
+}
+
+/* Color picker */
+
+.color-picker {
+  display: flex;
+  gap: 8px;
+}
+
+.color-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.color-swatch-active {
+  border-color: #201a4d;
+}
+
+/* Export bar */
+
+.export-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.export-bar-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.export-bar-actions button {
+  background: #6d5efc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.export-bar-actions button:hover {
+  background: #5a4bd6;
+}
+
+.export-bar-actions button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+@media (max-width: 760px) {
+  .app-pane-preview {
+    position: static;
+  }
+}
